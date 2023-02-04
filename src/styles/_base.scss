@@ -1,3 +1,5 @@
+@use 'colors';
+
 * {
   color: inherit;
   box-sizing: border-box;
@@ -6,8 +8,8 @@
 }
 
 body {
-  color: $gray-100;
-  background: $gray-600;
+  color: colors.$gray-100;
+  background: colors.$gray-600;
   -webkit-font-smoothing: 'antialiased';
 }
 
@@ -20,10 +22,32 @@ a {
   text-decoration: none;
 }
 
+html,
 body,
 input,
 textarea,
 button {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  html,
+  body,
+  input,
+  textarea,
+  button {
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body,
+  input,
+  textarea,
+  button {
+    font-size: 75%;
+  }
 }

@@ -14,18 +14,7 @@ module.exports = {
     './coverage/**/*.css',
   ],
   rules: {
-    'at-rule-no-unknown': [
-      true,
-      {
-        ignoreAtRules: [
-          'tailwind',
-          'apply',
-          'screen',
-          'variants',
-          'responsive',
-        ],
-      },
-    ],
+    'property-no-vendor-prefix': null,
     'no-duplicate-selectors': null,
     'no-empty-source': null,
     'rule-empty-line-before': null,
@@ -49,7 +38,6 @@ module.exports = {
     'scss/operator-no-newline-before': true,
     'scss/operator-no-unspaced': true,
     'scss/selector-no-redundant-nesting-selector': true,
-    // Allow SCSS and CSS module keywords beginning with `@`
     'scss/at-rule-no-unknown': null,
   },
 };

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { PlusCircle } from 'phosphor-react';
+
+import { PlusIcon } from '@/components/icons';
 
 import styles from './styles.module.scss';
 
@@ -11,7 +12,7 @@ const CreateButton = ({ children, ...props }: Props) => {
   return (
     <button className={styles.container} {...props}>
       <span>
-        {children} <PlusCircle size={16} />
+        {children} <PlusIcon />
       </span>
     </button>
   );

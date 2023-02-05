@@ -1,6 +1,5 @@
-import { CreateButton } from '@/components/CreateButton';
-import { Header } from '@/components/Header';
-import { Input } from '@/components/Input';
+import { CreateButton, Input } from '@/components/atoms';
+import { Header } from '@/components/molecules';
 
 import styles from './App.module.scss';
 
@@ -9,10 +8,10 @@ function App() {
     <>
       <Header />
       <main className={styles.mainContainer}>
-        <form className={styles.createTaskContainer}>
+        <div className={styles.createTaskContainer}>
           <Input type='text' placeholder='Adicione uma nova tarefa' />
           <CreateButton>Criar</CreateButton>
-        </form>
+        </div>
         <div></div>
       </main>
     </>

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type Props = React.SVGAttributes<SVGElement>;
 
-const TrashIcon = (props: Props): React.ReactElement<SVGElement> => (
+const TrashIcon = (props: Props): React.ReactElement<Props> => (
   <svg width={13} height={14} xmlns='http://www.w3.org/2000/svg' {...props}>
     <path
       d='M8.202 4.985h-1.33v5.522h1.33V4.985ZM5.462 4.985h-1.33v5.522h1.33V4.985Z'

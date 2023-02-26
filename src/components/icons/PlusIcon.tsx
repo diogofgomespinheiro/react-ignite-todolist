@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type Props = React.SVGAttributes<SVGElement>;
 
-const PlusIcon = (props: Props): React.ReactElement<SVGElement> => (
+const PlusIcon = (props: Props): React.ReactElement<Props> => (
   <svg
     width={16}
     height={16}

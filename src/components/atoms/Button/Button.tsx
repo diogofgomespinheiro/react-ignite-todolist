@@ -15,7 +15,7 @@ const Button = ({
   variant = 'primary',
   size = 'medium',
   ...props
-}: Props): React.ReactElement<HTMLButtonElement> => {
+}: Props): React.ReactElement<Props> => {
   return (
     <button
       className={classnames(styles.button({ variant, size }), className)}

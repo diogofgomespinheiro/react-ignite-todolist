@@ -12,7 +12,7 @@ globalStyle('*::before, *::after', {
   boxSizing: 'border-box',
 });
 
-globalStyle('::focus', {
+globalStyle(':focus', {
   outline: 'transparent',
   boxShadow: `0 0 0 1px ${theme.colors.purpleDark}`,
 });

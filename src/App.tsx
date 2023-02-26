@@ -1,7 +1,7 @@
 import { type ReactElement } from 'react';
 
 function App(): ReactElement {
-  return <div>Hello</div>;
+  return <div></div>;
 }
 
 export default App;

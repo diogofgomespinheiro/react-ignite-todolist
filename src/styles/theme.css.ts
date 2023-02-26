@@ -2,6 +2,7 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const theme = createGlobalTheme(':root', {
   colors: {
+    transparent: 'transparent',
     purple: '#8284fa',
     purpleDark: '#5e60ce',
     blue: '#4ea8de',
@@ -16,7 +17,7 @@ export const theme = createGlobalTheme(':root', {
     danger: '#e25858',
   },
   fonts: {
-    body: '"Inter", sans-serif"',
+    body: '"Inter", sans-serif',
   },
   fontSizes: {
     xs: '0.75rem',

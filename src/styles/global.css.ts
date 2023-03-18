@@ -14,7 +14,7 @@ globalStyle('*::before, *::after', {
 
 globalStyle(':focus', {
   outline: 'transparent',
-  boxShadow: `0 0 0 1px ${theme.colors.purpleDark}`,
+  boxShadow: `0 0 0 1px ${theme.colors.purpleDark100}`,
 });
 
 globalStyle('html, body, #root', {

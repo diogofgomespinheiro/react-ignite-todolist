@@ -4,9 +4,11 @@ export const theme = createGlobalTheme(':root', {
   colors: {
     transparent: 'transparent',
     purple: '#8284fa',
-    purpleDark: '#5e60ce',
+    purpleDark20: 'rgba(94, 96, 206, 0.2)',
+    purpleDark100: 'rgba(94, 96, 206, 1)',
     blue: '#4ea8de',
-    blueDark: '#1e6f9f',
+    blueDark20: 'rgba(30, 111, 159, 0.2)',
+    blueDark100: 'rgba(30, 111, 159, 1)',
     gray100: '#f2f2f2',
     gray200: '#d9d9d9',
     gray300: '#808080',

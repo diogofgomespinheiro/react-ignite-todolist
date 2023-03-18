@@ -19,7 +19,7 @@ export const button = recipe({
     variant: {
       primary: {
         color: theme.colors.gray100,
-        background: theme.colors.blueDark,
+        background: theme.colors.blueDark100,
         ':hover': {
           background: theme.colors.blue,
         },

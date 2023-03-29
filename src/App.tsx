@@ -1,13 +1,9 @@
 import { type ReactElement } from 'react';
 
-import { Header } from '@/components/molecules';
+import { Layout } from '@/layouts';
 
 function App(): ReactElement {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <Layout>Testing</Layout>;
 }
 
 export default App;

@@ -1,9 +1,9 @@
 import { type ReactElement } from 'react';
 
-import { Layout } from '@/layouts';
+import { TasksView } from '@/views/tasks/TasksView';
 
 function App(): ReactElement {
-  return <Layout>Testing</Layout>;
+  return <TasksView />;
 }
 
 export default App;

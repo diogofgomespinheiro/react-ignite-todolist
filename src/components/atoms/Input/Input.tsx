@@ -1,11 +1,12 @@
 import * as React from 'react';
+import classnames from 'classnames';
 
 import * as styles from './styles.css';
 
-type Props = React.InputHTMLAttributes<HTMLInputElement>;
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = (props: Props): React.ReactElement<Props> => {
-  return <input className={styles.input} {...props} />;
+const Input = ({ className, ...props }: Props): React.ReactElement<Props> => {
+  return <input className={classnames(styles.input, className)} {...props} />;
 };
 
 export { Input };

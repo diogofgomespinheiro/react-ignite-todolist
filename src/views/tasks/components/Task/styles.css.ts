@@ -28,16 +28,19 @@ export const textContainer = style({
 export const text = recipe({
   base: {
     flex: 1,
+    transition: 'color 0.25s ease-in, text-decoration-color 0.25s ease-in',
   },
   variants: {
     status: {
       [TaskStatus.TODO]: {
         color: theme.colors.gray100,
         textDecoration: 'none',
+        textDecorationColor: 'transparent',
       },
       [TaskStatus.COMPLETED]: {
         color: theme.colors.gray300,
         textDecoration: 'line-through',
+        textDecorationColor: 'auto',
       },
     },
   },

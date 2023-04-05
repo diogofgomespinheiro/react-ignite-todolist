@@ -1,20 +1,9 @@
 import * as React from 'react';
 
 import { Layout } from '@/layouts';
-import { CreateTaskForm } from './components';
+import { CreateTaskForm, Task, TaskStatus, type ITask } from './components';
 
 import * as styles from './styles.css';
-
-enum TaskStatus {
-  TODO = 'TODO',
-  COMPLETED = 'COMPLETED',
-}
-
-interface ITask {
-  id: string;
-  text: string;
-  status: TaskStatus;
-}
 
 const TasksView = (): React.ReactElement => {
   const [tasks, setTasks] = React.useState<ITask[]>([]);
@@ -28,6 +17,28 @@ const TasksView = (): React.ReactElement => {
       ...prevTasks,
       { id: crypto.randomUUID(), text: value, status: TaskStatus.TODO },
     ]);
+  }
+
+  function handleToogleTask(toogleTask: ITask): void {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) => {
+        if (task.id !== toogleTask.id) return task;
+
+        return {
+          ...task,
+          status:
+            task.status === TaskStatus.TODO
+              ? TaskStatus.COMPLETED
+              : TaskStatus.TODO,
+        };
+      })
+    );
+  }
+
+  function handleDeleteTask(taskToDelete: ITask): void {
+    setTasks((prevTasks) =>
+      prevTasks.filter((task) => task.id !== taskToDelete.id)
+    );
   }
 
   return (
@@ -51,7 +62,12 @@ const TasksView = (): React.ReactElement => {
         </div>
         <div className={styles.tasksContent}>
           {tasks.map((task) => (
-            <div key={task.id}>{task.text}</div>
+            <Task
+              key={task.id}
+              taskData={task}
+              onDeleteTask={handleDeleteTask}
+              onToogleTask={handleToogleTask}
+            />
           ))}
         </div>
       </div>

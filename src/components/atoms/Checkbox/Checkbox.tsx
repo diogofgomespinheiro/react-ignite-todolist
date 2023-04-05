@@ -30,12 +30,7 @@ const Checkbox = ({
   }
 
   return (
-    <div
-      className={styles.wrapper({ isChecked })}
-      onClick={(evt) => {
-        handleOnClick(evt);
-      }}
-    >
+    <div className={styles.wrapper({ isChecked })} onClick={handleOnClick}>
       <input
         className={styles.checkbox}
         type='checkbox'

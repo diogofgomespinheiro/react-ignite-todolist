@@ -1,2 +1,3 @@
 export * from './CreateButton';
-export * from './CreateTaskInput';
+export * from './CreateTaskForm';
+export * from './Task';

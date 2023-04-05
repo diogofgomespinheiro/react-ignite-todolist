@@ -13,9 +13,10 @@ export const tasksContainer = style({
 });
 
 export const tasksHeader = style({
-  width: '100%',
   display: 'flex',
   justifyContent: 'space-between',
+  width: '100%',
+  marginBottom: '1.5rem',
 });
 
 export const headerText = recipe({
@@ -50,5 +51,10 @@ export const headerPill = style({
 });
 
 export const tasksContent = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '0.75rem',
+
   width: '100%',
+  padding: '0 0 1.5rem 0',
 });

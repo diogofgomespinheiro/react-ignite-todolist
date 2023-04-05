@@ -5,8 +5,17 @@ import * as styles from './styles.css';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = ({ className, ...props }: Props): React.ReactElement<Props> => {
-  return <input className={classnames(styles.input, className)} {...props} />;
-};
+const Input = React.forwardRef<HTMLInputElement, Props>(
+  ({ className, ...props }: Props, ref): React.ReactElement<Props> => {
+    return (
+      <input
+        className={classnames(styles.input, className)}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
 
+Input.displayName = 'Input';
 export { Input };
